@@ -15,7 +15,7 @@ describe "Leaderboard", ->
       Session.set "selected_player", playerId
       givePoints()
       player = Players.findOne(playerId)
-      chai.assert.equal 10, player.score
+      chai.assert.equal player.score, 10
       Players.remove {name: "TestUser1"}
 ```
 
